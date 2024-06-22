@@ -7,7 +7,7 @@ import { getAllTasks } from "./controllers/tasks.mjs";
 
 const corsOptions = {
 
-    origin: 'http://localhost:5173', 
+    origin: 'https://taskmanagement333.vercel.app', 
    
     credentials: true, 
    
