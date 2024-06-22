@@ -5,11 +5,21 @@ import tasksRoutes from "./routes/tasks.mjs"
 import cors from "cors"
 import { getAllTasks } from "./controllers/tasks.mjs";
 
+const corsOptions = {
 
+    origin: 'http://localhost:5173', 
+   
+    credentials: true, 
+   
+    allowedHeaders: ['Content-Type', 'Authorization', 'X-Requested-With'],
+   
+    methods: 'GET, POST, PUT, DELETE, OPTIONS'
+   
+   };
 const app=express();
 app.use(express.json())
 app.use(express())
-app.use(cors())
+app.use(cors(corsOptions))
 
 
 
